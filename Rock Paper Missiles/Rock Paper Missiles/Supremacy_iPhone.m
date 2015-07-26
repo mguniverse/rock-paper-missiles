@@ -375,11 +375,9 @@
             [[opponent1 layer] addAnimation:animation forKey:@"position"];
         }
         
-        NSLog(@"Durability: %i", opponentDurability);
-        
         do {
             //faun wrote this
-            activeWeapon1 = 1 + (arc4random()%20);
+            activeWeapon1 = 1 + (arc4random()%27);
         } while ((activeWeapon1 == activeWeapon2) || (activeWeapon1 == activeWeapon3) || (activeWeapon1 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -510,11 +508,9 @@
             [[opponent1 layer] addAnimation:animation forKey:@"position"];
         }
         
-        NSLog(@"Durability: %i", opponentDurability);
-        
         do {
             //faun wrote this
-            activeWeapon2 = 1 + (arc4random()%20);
+            activeWeapon2 = 1 + (arc4random()%27);
         } while ((activeWeapon2 == activeWeapon1) || (activeWeapon2 == activeWeapon3) || (activeWeapon2 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -645,11 +641,9 @@
             [[opponent1 layer] addAnimation:animation forKey:@"position"];
         }
         
-        NSLog(@"Durability: %i", opponentDurability);
-        
         do {
             //faun wrote this
-            activeWeapon3 = 1 + (arc4random()%20);
+            activeWeapon3 = 1 + (arc4random()%27);
         } while ((activeWeapon3 == activeWeapon2) || (activeWeapon3 == activeWeapon1) || (activeWeapon3 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -783,18 +777,18 @@
 
 -(void)randomizeAllWeapons {
     //in theory, this function randomizes all cards in consecutive order
-    activeWeapon1 = 1 + (arc4random()%20);
+    activeWeapon1 = 1 + (arc4random()%27);
     do {
         //faun wrote this
-        activeWeapon2 = 1 + (arc4random()%20);
+        activeWeapon2 = 1 + (arc4random()%27);
     } while (activeWeapon1 == activeWeapon2);
     do {
         //faun wrote this
-        activeWeapon3 = 1 + (arc4random()%20);
+        activeWeapon3 = 1 + (arc4random()%27);
     } while ((activeWeapon3 == activeWeapon1) || (activeWeapon3 == activeWeapon2));
     do {
         //faun wrote this
-        opponentWeapon1 = 1 + (arc4random()%20);
+        opponentWeapon1 = 1 + (arc4random()%27);
     } while ((opponentWeapon1 == activeWeapon1) || (opponentWeapon1 == activeWeapon2) || (opponentWeapon1 == activeWeapon3));
 }
 
@@ -1243,6 +1237,12 @@
         combo = 0;
         score = score + bonus;
         bonus = 0;
+        if (trainingProgress == 2 && training == true) {
+            trainingView.transform = CGAffineTransformMakeTranslation(0, 0);
+            trainingLabel.text = [NSString stringWithFormat:@"Shield"];
+            trainingText.text = [NSString stringWithFormat:@"You can take damage when your combo meter is completely filled."];
+            [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
+        }
     }
     if (results == 1 && health > 0) {
         if (combo != 5) {
@@ -1251,9 +1251,21 @@
         combo = 0;
         score = score + bonus;
         bonus = 0;
+        if (trainingProgress == 2 && training == true) {
+            trainingView.transform = CGAffineTransformMakeTranslation(0, 0);
+            trainingLabel.text = [NSString stringWithFormat:@"Shield"];
+            trainingText.text = [NSString stringWithFormat:@"You can take damage when your combo meter is completely filled."];
+            [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
+        }
     }
     if (results == 0 && combo != 5) {
         combo = combo + 1;
+        if (trainingProgress == 4 && training == true) {
+            trainingView.transform = CGAffineTransformMakeTranslation(0, 0);
+            trainingLabel.text = [NSString stringWithFormat:@"Combo meter"];
+            trainingText.text = [NSString stringWithFormat:@"When you counter opponent cards, your combo meter grows."];
+            [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
+        }
     }
     
     [comboBar setProgress:combo/5 animated:YES];
@@ -1289,6 +1301,80 @@
     endView.alpha = 1;
     
     [UIView commitAnimations];
+}
+
+-(IBAction)toggleCardInfo {
+    if (animating == false) {
+        animating = true;
+        [self buttonSound];
+        
+        if (currentCardView == 1) {
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:animationSpeed];
+            [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+            
+            active1.transform = CGAffineTransformMakeTranslation(-200, 0);
+            active2.transform = CGAffineTransformMakeTranslation(-200, 0);
+            active3.transform = CGAffineTransformMakeTranslation(-200, 0);
+            active1.alpha = 0;
+            active2.alpha = 0;
+            active3.alpha = 0;
+            
+            [UIView commitAnimations];
+            
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:animationSpeed];
+            [UIView setAnimationDelay:animationSpeed];
+            [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+            
+            CGRect newFrame = opponent1.frame;
+            newFrame.size = CGSizeMake(280.0, 244.0);
+            opponent1.frame = newFrame;
+            
+            opponentInfoLabel.alpha = 1;
+            opponentInfoText.alpha = 1;
+            
+            [UIView commitAnimations];
+            
+            currentCardView++;
+        }
+        else {
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:animationSpeed];
+            [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+            
+            CGRect newFrame = opponent1.frame;
+            newFrame.size = CGSizeMake(280.0, 128.0);
+            opponent1.frame = newFrame;
+            
+            opponentInfoLabel.alpha = 0;
+            opponentInfoText.alpha = 0;
+            
+            [UIView commitAnimations];
+            
+            active1.transform = CGAffineTransformMakeTranslation(200, 0);
+            active2.transform = CGAffineTransformMakeTranslation(200, 0);
+            active3.transform = CGAffineTransformMakeTranslation(200, 0);
+            
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:animationSpeed];
+            [UIView setAnimationDelay:animationSpeed];
+            [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+            
+            active1.transform = CGAffineTransformMakeTranslation(0, 0);
+            active2.transform = CGAffineTransformMakeTranslation(0, 0);
+            active3.transform = CGAffineTransformMakeTranslation(0, 0);
+            active1.alpha = 1;
+            active2.alpha = 1;
+            active3.alpha = 1;
+            
+            [UIView commitAnimations];
+            
+            currentCardView--;
+        }
+        
+        [self performSelector:@selector(endAnimation) withObject:self afterDelay:animationSpeed];
+    }
 }
 
 -(IBAction)dismissError {
@@ -1339,6 +1425,8 @@
         [UIView commitAnimations];
         [self performSelector:@selector(endAnimation) withObject:self afterDelay:1];
     }
+    
+    NSLog(@"%i", trainingProgress);
 }
 
 -(IBAction)retry {
@@ -1400,15 +1488,15 @@
 -(void)rerollWeapons {
     do {
         //faun wrote this
-        activeWeapon1 = 1 + (arc4random()%20);
+        activeWeapon1 = 1 + (arc4random()%27);
     } while (activeWeapon1 == opponentWeapon1);
     do {
         //faun wrote this
-        activeWeapon2 = 1 + (arc4random()%20);
+        activeWeapon2 = 1 + (arc4random()%27);
     } while ((activeWeapon2 == opponentWeapon1 || activeWeapon2 == activeWeapon1));
     do {
         //faun wrote this
-        activeWeapon3 = 1 + (arc4random()%20);
+        activeWeapon3 = 1 + (arc4random()%27);
     } while ((activeWeapon2 == opponentWeapon1 || activeWeapon3 == activeWeapon1) || (activeWeapon3 == activeWeapon2));
 }
 
@@ -1466,6 +1554,8 @@
 }
 
 -(void)showTraining {
+    trainingProgress--;
+    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:animationSpeed];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -1493,8 +1583,6 @@
     
     [self loadImages];
     
-    //NSLog(@"Active hand: %i, %i, %i", activeWeapon1, activeWeapon2, activeWeapon3);
-    
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:animationSpeed];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -1504,12 +1592,24 @@
     active3.alpha = 1;
     
     [UIView commitAnimations];
+    
+    if (trainingProgress == 1 && training == true) {
+        trainingLabel.text = [NSString stringWithFormat:@"Shuffle"];
+        trainingText.text = [NSString stringWithFormat:@"If you don’t have any effective cards, you can shuffle to draw new ones."];
+        [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
+    }
 }
 
 -(void)loadImages {
     //also gonna load the labels and progress bar
     if (combo == 5) {
         healthLabel.text = [NSString stringWithFormat:@"HP %i (+%i)", health, bonus];
+        if (trainingProgress == 3 && training == true) {
+            trainingView.transform = CGAffineTransformMakeTranslation(0, 0);
+            trainingLabel.text = [NSString stringWithFormat:@"Earning points"];
+            trainingText.text = [NSString stringWithFormat:@"If your combo meter is filled completely, you start earning points."];
+            [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
+        }
     }
     else {
         healthLabel.text = [NSString stringWithFormat:@"HP %i", health];
@@ -1952,6 +2052,7 @@
     //you may shuffle once at the beginning of the game
     shuffleCooldown = 0;
     trainingProgress = 5;
+    currentCardView = 1;
     
     backView.alpha = 0;
     beginView.alpha = 0;
@@ -2033,7 +2134,6 @@
     active2.layer.cornerRadius = buttonRadius;
     active3.layer.cornerRadius = buttonRadius;
     opponent1.layer.cornerRadius = buttonRadius;
-    opponentInfo1.layer.cornerRadius = buttonRadius;
     
     empty1.layer.cornerRadius = buttonRadius;
     empty2.layer.cornerRadius = buttonRadius;
@@ -2052,10 +2152,10 @@
     
     [self performSelector:@selector(startupAnimations) withObject:self afterDelay:animationSpeed];
     
-    
-    trainingLabel.text = [NSString stringWithFormat:@"Starting a new game"];
-    trainingText.text = [NSString stringWithFormat:@"Start the game by choosing one of your three active cards."];
-    if (training == true) {
+    if (trainingProgress == 5 && training == true) {
+        trainingView.transform = CGAffineTransformMakeTranslation(0, 0);
+        trainingLabel.text = [NSString stringWithFormat:@"Starting a new game"];
+        trainingText.text = [NSString stringWithFormat:@"Start the game by choosing one of your three active cards."];
         [self performSelector:@selector(showTraining) withObject:self afterDelay:animationSpeed*2];
     }
 }

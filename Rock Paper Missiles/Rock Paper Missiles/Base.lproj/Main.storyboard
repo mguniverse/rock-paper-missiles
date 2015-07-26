@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -335,37 +335,40 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragon-small.png" id="i5f-GE-eaE">
                                         <rect key="frame" x="76" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="durability-1.png" id="Hw2-0g-lY5">
                                         <rect key="frame" x="250" y="0.0" width="30" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" id="VtI-A7-ITh">
-                                <rect key="frame" x="20" y="202" width="280" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Weak to stone, distraction, and blade weapons." id="zxP-w7-Gjm">
-                                        <rect key="frame" x="8" y="57" width="264" height="52"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" editable="NO" text="Weak to stone, distraction, and blade weapons." selectable="NO" id="zxP-w7-Gjm">
+                                        <rect key="frame" x="8" y="172" width="264" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragon | Mythical" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sfg-Gt-zup">
-                                        <rect key="frame" x="12" y="19" width="260" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragon | Mythical" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sfg-Gt-zup">
+                                        <rect key="frame" x="10" y="134" width="260" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y9e-6F-Q2z">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="toggleCardInfo" destination="LUf-la-5Sm" eventType="touchUpInside" id="XPM-Z0-VrL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 SHUFFLE(S) REMAINING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ByZ-ku-3ZG">
                                 <rect key="frame" x="16" y="518" width="288" height="30"/>
@@ -557,10 +560,12 @@
                         <outlet property="menuButton" destination="taQ-6x-hkZ" id="cz9-7W-O8Y"/>
                         <outlet property="opponent1" destination="fmU-fF-pHd" id="tvW-oo-bem"/>
                         <outlet property="opponentImage1" destination="i5f-GE-eaE" id="cbU-1a-aMk"/>
-                        <outlet property="opponentInfo1" destination="VtI-A7-ITh" id="eDd-ag-M4A"/>
+                        <outlet property="opponentInfoLabel" destination="Sfg-Gt-zup" id="0Lp-Se-BUj"/>
+                        <outlet property="opponentInfoText" destination="zxP-w7-Gjm" id="4uR-Hj-qWc"/>
                         <outlet property="retryView" destination="jan-FM-r6H" id="z7B-6o-473"/>
                         <outlet property="shuffleButton" destination="t7l-Va-Kuj" id="Hxy-1q-SWH"/>
                         <outlet property="trainingLabel" destination="zoE-eZ-t8Y" id="WNL-46-Tik"/>
+                        <outlet property="trainingText" destination="28S-mJ-VXA" id="Oyw-Do-C2J"/>
                         <outlet property="trainingView" destination="w6P-cc-D5b" id="8aX-pe-IAk"/>
                         <segue destination="vXZ-lx-hvc" kind="modal" identifier="Menu" animates="NO" id="EQj-vk-pVg"/>
                     </connections>
@@ -568,350 +573,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZb-Il-DuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="553" y="-311"/>
-        </scene>
-        <!--Rush i Phone-->
-        <scene sceneID="TGZ-fN-oC0">
-            <objects>
-                <viewController id="6EF-8E-E13" customClass="Rush_iPhone" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WTj-DP-ctK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" id="6ni-1G-Mon">
-                                <rect key="frame" x="20" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="WhH-lY-FMo">
-                                <rect key="frame" x="116" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="eOf-Z9-bXd">
-                                <rect key="frame" x="212" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="KnU-rc-gnY">
-                                <rect key="frame" x="20" y="202" width="280" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="nKQ-Tn-oba">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" id="Ec1-AS-dux">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CPA-eA-mhg">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="menu-button.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="menu-button-pressed.png"/>
-                                                <state key="highlighted" image="menu-button-pressed.png"/>
-                                                <connections>
-                                                    <action selector="buttonPlaceholder" destination="6EF-8E-E13" eventType="touchUpInside" id="Xps-zo-zvA"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gaQ-lH-AtA">
-                                                <rect key="frame" x="256" y="0.0" width="64" height="64"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="shuffle.png">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <state key="selected" image="shuffle-pressed.png"/>
-                                                <state key="highlighted" image="shuffle-pressed.png"/>
-                                                <connections>
-                                                    <action selector="shuffleWeapons" destination="6EF-8E-E13" eventType="touchUpInside" id="mJk-rh-miD"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP ∞" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ru1-g0-6s4">
-                                                <rect key="frame" x="69" y="7" width="182" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view alpha="0.0" contentMode="scaleToFill" id="opg-6z-yq7">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="0.0" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="VAR-jR-o5a">
-                                <rect key="frame" x="20" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missiles-tiny.png" id="vvI-Hk-bVV">
-                                        <rect key="frame" x="12" y="12" width="64" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2j-ae-AQq">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushActive1" destination="6EF-8E-E13" eventType="touchUpInside" id="blG-A7-IDn"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                            </view>
-                            <view contentMode="scaleToFill" id="mIr-fG-xW1">
-                                <rect key="frame" x="116" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flaming-arrow-tiny.png" id="7tK-xX-7uy">
-                                        <rect key="frame" x="12" y="12" width="64" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pv8-U8-Lb9">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushActive2" destination="6EF-8E-E13" eventType="touchUpInside" id="Ha3-Lv-aJ9"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="tqW-vx-AeX">
-                                <rect key="frame" x="212" y="338" width="88" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock-tiny.png" id="uNI-fE-AXf">
-                                        <rect key="frame" x="12" y="12" width="64" height="64"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Fd-ul-2dt">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pushActive3" destination="6EF-8E-E13" eventType="touchUpInside" id="DH3-h6-lco"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="f72-6w-cPs">
-                                <rect key="frame" x="20" y="202" width="280" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dragon-small.png" id="Hxs-Se-prQ">
-                                        <rect key="frame" x="76" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" id="czz-lF-g7h">
-                                <rect key="frame" x="20" y="202" width="280" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Weak to stone, distraction, and blade weapons." id="GVi-Yc-AnW">
-                                        <rect key="frame" x="8" y="57" width="264" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dragon | Mythical" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5tu-Cz-IcK">
-                                        <rect key="frame" x="12" y="19" width="260" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" id="pDX-CZ-jDL">
-                                <rect key="frame" x="20" y="72" width="280" height="3"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="progressTintColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 SHUFFLE(S) REMAINING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GG0-iJ-zQQ">
-                                <rect key="frame" x="16" y="518" width="288" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view alpha="0.0" contentMode="scaleToFill" id="yXi-sk-gRQ">
-                                <rect key="frame" x="35" y="134" width="250" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You were defeated by the opponent. Your final score was 000." selectable="NO" id="CXG-gB-gSQ">
-                                        <rect key="frame" x="25" y="75" width="200" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xf2-2m-vdf">
-                                        <rect key="frame" x="30" y="37" width="195" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="CIb-Kr-3w7">
-                                        <rect key="frame" x="25" y="213" width="200" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Menu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dyj-Tb-c49">
-                                                <rect key="frame" x="12" y="10" width="200" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hYz-4x-PJX">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonPlaceholder" destination="6EF-8E-E13" eventType="touchUpInside" id="Zqq-Tn-1K1"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" id="PyX-hu-0nt">
-                                        <rect key="frame" x="25" y="155" width="200" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jpD-X6-SIg">
-                                                <rect key="frame" x="12" y="10" width="200" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m02-xJ-fcQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="retry" destination="6EF-8E-E13" eventType="touchUpInside" id="3FE-3x-b6N"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" id="gCD-bu-5it">
-                                <rect key="frame" x="35" y="185" width="250" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pzE-So-1tQ">
-                                        <rect key="frame" x="30" y="20" width="195" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" id="uBe-xf-W60">
-                                        <rect key="frame" x="25" y="128" width="200" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ok" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hlq-TQ-xPO">
-                                                <rect key="frame" x="12" y="10" width="200" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0gB-PB-vee">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="dismissError" destination="6EF-8E-E13" eventType="touchUpInside" id="W5W-wv-r6Z"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
-                                    </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You cannot shuffle your weapons twice in a row." selectable="NO" id="MJG-B6-Ykz">
-                                        <rect key="frame" x="25" y="58" width="200" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="0.0" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <connections>
-                        <outlet property="active1" destination="VAR-jR-o5a" id="vuZ-q1-O5x"/>
-                        <outlet property="active2" destination="mIr-fG-xW1" id="Pov-vS-wXq"/>
-                        <outlet property="active3" destination="tqW-vx-AeX" id="Xbo-s0-zan"/>
-                        <outlet property="activeImage1" destination="vvI-Hk-bVV" id="YSx-6A-UAi"/>
-                        <outlet property="activeImage2" destination="7tK-xX-7uy" id="hPa-Og-u3i"/>
-                        <outlet property="activeImage3" destination="uNI-fE-AXf" id="iDZ-Ya-Jyd"/>
-                        <outlet property="comboBar" destination="pDX-CZ-jDL" id="ccx-07-tiw"/>
-                        <outlet property="dimView" destination="opg-6z-yq7" id="i84-N5-PFv"/>
-                        <outlet property="dismissView" destination="uBe-xf-W60" id="avL-QF-ofN"/>
-                        <outlet property="empty1" destination="6ni-1G-Mon" id="gwX-Tb-Yu2"/>
-                        <outlet property="empty2" destination="WhH-lY-FMo" id="aoO-HP-qyz"/>
-                        <outlet property="empty3" destination="eOf-Z9-bXd" id="Ls0-DF-6am"/>
-                        <outlet property="empty4" destination="KnU-rc-gnY" id="RKq-9Z-rMe"/>
-                        <outlet property="endLabel" destination="Xf2-2m-vdf" id="tdb-rI-AlA"/>
-                        <outlet property="endText" destination="CXG-gB-gSQ" id="3vA-zI-L6a"/>
-                        <outlet property="endView" destination="yXi-sk-gRQ" id="dvc-Ch-ICv"/>
-                        <outlet property="errorLabel" destination="pzE-So-1tQ" id="eIP-YY-Arc"/>
-                        <outlet property="errorText" destination="MJG-B6-Ykz" id="imb-Ex-dIQ"/>
-                        <outlet property="errorView" destination="gCD-bu-5it" id="F2e-rw-gDs"/>
-                        <outlet property="healthLabel" destination="Ru1-g0-6s4" id="ph3-Wr-BIs"/>
-                        <outlet property="mainMenuView" destination="CIb-Kr-3w7" id="JAB-Dx-o1f"/>
-                        <outlet property="opponent1" destination="f72-6w-cPs" id="KBL-Ws-1Na"/>
-                        <outlet property="opponentImage1" destination="Hxs-Se-prQ" id="XKA-hP-cV5"/>
-                        <outlet property="opponentInfo1" destination="czz-lF-g7h" id="zIQ-zo-HBs"/>
-                        <outlet property="retryView" destination="PyX-hu-0nt" id="1n0-Bl-hIg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N9c-Wo-eC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-140" y="-397"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="55K-Qj-pC1">

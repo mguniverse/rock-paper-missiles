@@ -57,6 +57,8 @@
     
     int trainingProgress;
     
+    int currentCardView;
+    
     IBOutlet UIProgressView *comboBar;
     
     IBOutlet UILabel *titleLabel1;
@@ -102,7 +104,9 @@
     IBOutlet UIView *active2;
     IBOutlet UIView *active3;
     IBOutlet UIView *opponent1;
-    IBOutlet UIView *opponentInfo1;
+    
+    IBOutlet UILabel *opponentInfoLabel;
+    IBOutlet UITextView *opponentInfoText;
     
     IBOutlet UIView *supremacyView;
     IBOutlet UIView *rushView;
