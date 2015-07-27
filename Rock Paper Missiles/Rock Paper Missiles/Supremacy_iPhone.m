@@ -974,7 +974,7 @@
                                                   scale:1.0 orientation: UIImageOrientationUpMirrored]];
 }
 
--(void)checkResults {
+-(void)checkEnemyType {
     //check enemy type
     if (opponentWeapon1 == 1) {
         stoneTypeEnemy = true;
@@ -1060,6 +1060,32 @@
     else if (opponentWeapon1 == 28) {
         firearmTypeEnemy = true;
     }
+    
+    if (stoneTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to distraction, explosive, and firearm weapons."];
+    }
+    if (distractionTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to blade, flame, and firearm weapons."];
+    }
+    if (bladeTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to stone, flame, and firearm weapons."];
+    }
+    if (explosiveTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to blade, distraction, and mythical weapons."];
+    }
+    if (mythicalTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to stone, blade, and distraction weapons."];
+    }
+    if (flameTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to stone, explosive, and mythical weapons."];
+    }
+    if (firearmTypeEnemy == true) {
+        opponentInfoText.text = [NSString stringWithFormat:@"Weak to explosive, mythical, and flame weapons."];
+    }
+}
+
+-(void)checkResults {
+    [self checkEnemyType];
     
     //check results
     if (stone == true) {
@@ -1328,7 +1354,7 @@
             [UIView setAnimationCurve:UIViewAnimationCurveLinear];
             
             CGRect newFrame = opponent1.frame;
-            newFrame.size = CGSizeMake(280.0, 244.0);
+            newFrame.size = CGSizeMake(280.0, 224.0);
             opponent1.frame = newFrame;
             
             opponentInfoLabel.alpha = 1;
@@ -1888,88 +1914,118 @@
     //load opponent slot 1
     if (opponentWeapon1 == 1) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"rock-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Rock | Stone"];
     }
     else if (opponentWeapon1 == 2) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"paper-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Paper | Distraction"];
     }
     else if (opponentWeapon1 == 3) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"scissors-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Scissors | Blade"];
     }
     else if (opponentWeapon1 == 4) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"missiles-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Missiles | Explosive"];
     }
     else if (opponentWeapon1 == 5) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"dragon-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Dragon | Mythical"];
     }
     else if (opponentWeapon1 == 6) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"flaming-arrow-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Flaming Arrow | Flame"];
     }
     else if (opponentWeapon1 == 7) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"flash-bang-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Flashbang | Distraction"];
     }
     else if (opponentWeapon1 == 8) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"grenade-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Grenade | Explosive"];
     }
     else if (opponentWeapon1 == 9) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"molotov-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Molotov | Flame"];
     }
     else if (opponentWeapon1 == 10) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"hydra-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Hydra | Mythical"];
     }
     else if (opponentWeapon1 == 11) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"meteor-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Meteor | Stone"];
     }
     else if (opponentWeapon1 == 12) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"shotgun-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Shotgun | Firearm"];
     }
     else if (opponentWeapon1 == 13) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"thrown-daggers-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Kunai | Blade"];
     }
     else if (opponentWeapon1 == 14) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"stone-spear-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Spear | Stone"];
     }
     else if (opponentWeapon1 == 15) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"bomb-arrow-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Bomb Arrows | Explosive"];
     }
     else if (opponentWeapon1 == 16) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"flamethrower-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Flamethrower | Flame"];
     }
     else if (opponentWeapon1 == 17) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"katana-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Katana | Blade"];
     }
     else if (opponentWeapon1 == 18) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"scarecrow-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Scarecrow | Distraction"];
     }
     else if (opponentWeapon1 == 19) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"revolver-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Revolver | Firearm"];
     }
     else if (opponentWeapon1 == 20) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"phoenix-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Phoenix | Mythical"];
     }
     else if (opponentWeapon1 == 21) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"rifle-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Rifle | Firearm"];
     }
     else if (opponentWeapon1 == 22) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"firecracker-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Firecracker | Distraction"];
     }
     else if (opponentWeapon1 == 23) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"hotsauce-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Hot Sauce | Flame"];
     }
     else if (opponentWeapon1 == 24) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"machete-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Machete | Blade"];
     }
     else if (opponentWeapon1 == 25) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"medusa-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Medusa | Mythical"];
     }
     else if (opponentWeapon1 == 26) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"moai-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Moai | Stone"];
     }
     else if (opponentWeapon1 == 27) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"rocket-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Rocket Launcher | Explosive"];
     }
     else if (opponentWeapon1 == 28) {
         [opponentImage1 setImage:[UIImage imageNamed:[NSString stringWithFormat:@"slingshot-small.png"]]];
+        opponentInfoLabel.text = [NSString stringWithFormat:@"Slingshot | Firearm"];
     }
+    
+    [self checkEnemyType];
 }
 
 -(void)countUp {
