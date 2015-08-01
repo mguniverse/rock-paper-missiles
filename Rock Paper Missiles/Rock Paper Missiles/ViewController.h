@@ -19,6 +19,7 @@
     int soundClip;
     
     int currentMenu;
+    int currentSubMenu;
     float animationSpeed;
     
     IBOutlet UILabel *bannerLabel;
@@ -35,6 +36,11 @@
     IBOutlet UIView *aboutView;
     IBOutlet UIView *backView;
     IBOutlet UIView *beginView;
+    
+    IBOutlet UIView *dimView;
+    IBOutlet UIView *errorView;
+    IBOutlet UITextView *errorText;
+    IBOutlet UILabel *errorLabel;
     
     UIImage *sourceImage;
     NSTimer *cinematicTimer;

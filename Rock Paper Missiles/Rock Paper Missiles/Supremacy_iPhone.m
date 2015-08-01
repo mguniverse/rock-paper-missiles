@@ -1460,6 +1460,25 @@
         animating = true;
         [self buttonSound];
         
+        //shuffles the weapons when you retry
+        shuffleCooldown = 4;
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:animationSpeed];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        
+        active1.transform = CGAffineTransformMakeTranslation(0, 200);
+        active2.transform = CGAffineTransformMakeTranslation(0, 200);
+        active3.transform = CGAffineTransformMakeTranslation(0, 200);
+        
+        active1.alpha = 0;
+        active2.alpha = 0;
+        active3.alpha = 0;
+        
+        [UIView commitAnimations];
+        
+        [self performSelector:@selector(endShuffle) withObject:self afterDelay:animationSpeed];
+        
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:animationSpeed];
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];

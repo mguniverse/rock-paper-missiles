@@ -21,6 +21,7 @@
         [self buttonSound];
         
         if (currentMenu == 1) {
+            currentSubMenu = 1;
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:animationSpeed];
             [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -54,6 +55,7 @@
             currentMenu++;
         }
         else {
+            currentSubMenu = 0;
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:animationSpeed];
             [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -96,6 +98,7 @@
         animating = true;
         [self buttonSound];
         if (currentMenu == 1) {
+            currentSubMenu = 2;
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:animationSpeed];
             [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -130,6 +133,7 @@
             currentMenu++;
         }
         else {
+            currentSubMenu = 0;
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:animationSpeed];
             [UIView setAnimationCurve:UIViewAnimationCurveLinear];
@@ -167,26 +171,38 @@
     }
 }
 
+-(IBAction)about {
+    [self buttonSound];
+    [self showError];
+}
+
 -(IBAction)startGame {
     [self buttonSound];
     
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:animationSpeed];
-    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    
-    supremacyView.transform = CGAffineTransformMakeTranslation(-200, 0);
-    backView.transform = CGAffineTransformMakeTranslation(-200, 0);
-    beginView.transform = CGAffineTransformMakeTranslation(-200, 0);
-    supremacyView.alpha = 0;
-    backView.alpha = 0;
-    beginView.alpha = 0;
-    
-    bannerLabel.transform = CGAffineTransformMakeTranslation(0, 60);
-    bannerLabel.alpha = 0;
-    
-    [UIView commitAnimations];
-    
-     [self performSelector:@selector(initiateSupremacySegue) withObject:self afterDelay:animationSpeed                                                                                                                                                                                                              ];
+    if (currentSubMenu == 1) {
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:animationSpeed];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        
+        supremacyView.transform = CGAffineTransformMakeTranslation(-200, 0);
+        backView.transform = CGAffineTransformMakeTranslation(-200, 0);
+        beginView.transform = CGAffineTransformMakeTranslation(-200, 0);
+        supremacyView.alpha = 0;
+        backView.alpha = 0;
+        beginView.alpha = 0;
+        
+        bannerLabel.transform = CGAffineTransformMakeTranslation(0, 60);
+        bannerLabel.alpha = 0;
+        
+        [UIView commitAnimations];
+        
+        [self performSelector:@selector(initiateSupremacySegue) withObject:self afterDelay:animationSpeed                                                                                                                                                                                                              ];
+    }
+    if (currentSubMenu == 2) {
+        [self showError];
+    }
+    else {
+    }
 }
 
 -(void)initiateSupremacySegue {
@@ -501,6 +517,53 @@
     [UIView commitAnimations];
 }
 
+-(void)showError {
+    errorLabel.text = [NSString stringWithFormat:@"Unavailable"];
+    errorText.text = [NSString stringWithFormat:@"This area is currently unavailable, come back later!"];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationSpeed];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    
+    dimView.alpha = 0.2;
+    
+    [UIView commitAnimations];
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationSpeed];
+    [UIView setAnimationDelay:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    
+    errorView.alpha = 1;
+    
+    [UIView commitAnimations];
+}
+
+-(IBAction)dismissError {
+    if (animating == false) {
+        animating = true;
+        [self buttonSound];
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:animationSpeed];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        
+        errorView.alpha = 0;
+        
+        [UIView commitAnimations];
+        
+        [UIView beginAnimations:nil context:nil];
+        [UIView setAnimationDuration:animationSpeed];
+        [UIView setAnimationDelay:0.5];
+        [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+        
+        dimView.alpha = 0;
+        
+        [UIView commitAnimations];
+        [self performSelector:@selector(endAnimation) withObject:self afterDelay:1];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -540,6 +603,7 @@
     aboutView.layer.cornerRadius = buttonRadius;
     backView.layer.cornerRadius = buttonRadius;
     beginView.layer.cornerRadius = buttonRadius;
+    errorView.layer.cornerRadius = buttonRadius;
     
     [self performSelector:@selector(startupAnimations) withObject:self afterDelay:animationSpeed];
 }
