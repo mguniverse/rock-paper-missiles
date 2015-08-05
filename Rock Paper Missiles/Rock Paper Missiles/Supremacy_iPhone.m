@@ -377,7 +377,7 @@
         
         do {
             //faun wrote this
-            activeWeapon1 = 1 + (arc4random()%27);
+            activeWeapon1 = 1 + (arc4random()%28);
         } while ((activeWeapon1 == activeWeapon2) || (activeWeapon1 == activeWeapon3) || (activeWeapon1 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -510,7 +510,7 @@
         
         do {
             //faun wrote this
-            activeWeapon2 = 1 + (arc4random()%27);
+            activeWeapon2 = 1 + (arc4random()%28);
         } while ((activeWeapon2 == activeWeapon1) || (activeWeapon2 == activeWeapon3) || (activeWeapon2 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -643,7 +643,7 @@
         
         do {
             //faun wrote this
-            activeWeapon3 = 1 + (arc4random()%27);
+            activeWeapon3 = 1 + (arc4random()%28);
         } while ((activeWeapon3 == activeWeapon2) || (activeWeapon3 == activeWeapon1) || (activeWeapon3 == opponentWeapon1));
         
         [UIView beginAnimations:nil context:NULL];
@@ -777,18 +777,18 @@
 
 -(void)randomizeAllWeapons {
     //in theory, this function randomizes all cards in consecutive order
-    activeWeapon1 = 1 + (arc4random()%27);
+    activeWeapon1 = 1 + (arc4random()%28);
     do {
         //faun wrote this
-        activeWeapon2 = 1 + (arc4random()%27);
+        activeWeapon2 = 1 + (arc4random()%28);
     } while (activeWeapon1 == activeWeapon2);
     do {
         //faun wrote this
-        activeWeapon3 = 1 + (arc4random()%27);
+        activeWeapon3 = 1 + (arc4random()%28);
     } while ((activeWeapon3 == activeWeapon1) || (activeWeapon3 == activeWeapon2));
     do {
         //faun wrote this
-        opponentWeapon1 = 1 + (arc4random()%27);
+        opponentWeapon1 = 1 + (arc4random()%28);
     } while ((opponentWeapon1 == activeWeapon1) || (opponentWeapon1 == activeWeapon2) || (opponentWeapon1 == activeWeapon3));
 }
 
@@ -1533,15 +1533,15 @@
 -(void)rerollWeapons {
     do {
         //faun wrote this
-        activeWeapon1 = 1 + (arc4random()%27);
+        activeWeapon1 = 1 + (arc4random()%28);
     } while (activeWeapon1 == opponentWeapon1);
     do {
         //faun wrote this
-        activeWeapon2 = 1 + (arc4random()%27);
+        activeWeapon2 = 1 + (arc4random()%28);
     } while ((activeWeapon2 == opponentWeapon1 || activeWeapon2 == activeWeapon1));
     do {
         //faun wrote this
-        activeWeapon3 = 1 + (arc4random()%27);
+        activeWeapon3 = 1 + (arc4random()%28);
     } while ((activeWeapon2 == opponentWeapon1 || activeWeapon3 == activeWeapon1) || (activeWeapon3 == activeWeapon2));
 }
 

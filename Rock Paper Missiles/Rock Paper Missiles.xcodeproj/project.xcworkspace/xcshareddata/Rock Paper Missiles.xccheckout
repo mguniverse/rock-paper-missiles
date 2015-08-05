@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C3BFCD6A-61C0-438A-B15C-B1E5916B8D8B</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Rock Paper Missiles</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6BAEF66EA2AACBA70EC701BBAB719CACA29D4D37</key>
 		<string>https://github.com/mguniverse/rock-paper-missiles.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Rock Paper Missiles/Rock Paper Missiles.xcodeproj/project.xcworkspace</string>
+	<string>Rock Paper Missiles/Rock Paper Missiles.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6BAEF66EA2AACBA70EC701BBAB719CACA29D4D37</key>
