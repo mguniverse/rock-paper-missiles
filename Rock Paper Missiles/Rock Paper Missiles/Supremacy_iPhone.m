@@ -200,6 +200,8 @@
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     
     comboBar.alpha = 0;
+    endView.alpha = 0;
+    dimView.alpha = 0;
     
     active1.alpha = 0;
     active1.transform = CGAffineTransformMakeTranslation(-200, 0);
