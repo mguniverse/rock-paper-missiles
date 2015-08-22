@@ -13,6 +13,9 @@
 @interface Supremacy_iPhone : UIViewController {
     AVAudioPlayer *buttonSound;
     
+    NSString *currentDate;
+    NSString *newDate;
+    
     BOOL stone;
     BOOL distraction;
     BOOL blade;
@@ -39,6 +42,9 @@
     int results;
     int bonus;
     int score;
+    int topScore;
+    int lastScore;
+    int dailyScore;
     int health;
     int soundClip;
     int shuffleCooldown;

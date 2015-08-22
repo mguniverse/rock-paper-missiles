@@ -2120,6 +2120,15 @@
     
     cinematicTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countUp) userInfo:nil repeats:YES];
     
+    newDate = [[NSUserDefaults standardUserDefaults]
+               stringForKey:@"savedNewDate"];
+    currentDate = [[NSUserDefaults standardUserDefaults]
+                   stringForKey:@"savedCurrentDate"];
+    
+    //loads your highest score and displays it in the label
+    topScore = [[NSUserDefaults standardUserDefaults] floatForKey:@"savedScore"];
+    dailyScore = [[NSUserDefaults standardUserDefaults] floatForKey:@"savedDaily"];
+    
     animating = false;
     training = true;
     buttonRadius = 4;
