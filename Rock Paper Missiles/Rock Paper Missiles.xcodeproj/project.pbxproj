@@ -170,6 +170,8 @@
 		D4E55C1C1ABAAA060094A9F8 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E55C1B1ABAAA060094A9F8 /* iTunesArtwork.png */; };
 		D4E67A011A8B248300795EB7 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E679FF1A8B248300795EB7 /* close.png */; };
 		D4E67A021A8B248300795EB7 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E67A001A8B248300795EB7 /* close@2x.png */; };
+		D4F1EC4D1BA65A8C00F1C056 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F1EC4B1BA65A8C00F1C056 /* Main_iPad.storyboard */; };
+		D4F1EC501BA65AC100F1C056 /* ViewController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F1EC4F1BA65AC100F1C056 /* ViewController_iPad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -355,6 +357,9 @@
 		D4E55C1B1ABAAA060094A9F8 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		D4E679FF1A8B248300795EB7 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		D4E67A001A8B248300795EB7 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		D4F1EC4C1BA65A8C00F1C056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		D4F1EC4E1BA65AC100F1C056 /* ViewController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController_iPad.h; sourceTree = "<group>"; };
+		D4F1EC4F1BA65AC100F1C056 /* ViewController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,7 +406,10 @@
 				D401A4321A89DB9000066AEF /* AppDelegate.m */,
 				D401A4341A89DB9000066AEF /* ViewController.h */,
 				D401A4351A89DB9000066AEF /* ViewController.m */,
+				D4F1EC4E1BA65AC100F1C056 /* ViewController_iPad.h */,
+				D4F1EC4F1BA65AC100F1C056 /* ViewController_iPad.m */,
 				D401A4371A89DB9000066AEF /* Main.storyboard */,
+				D4F1EC4B1BA65A8C00F1C056 /* Main_iPad.storyboard */,
 				D401A43A1A89DB9000066AEF /* Images.xcassets */,
 				D401A43C1A89DB9000066AEF /* LaunchScreen.xib */,
 				D401A42D1A89DB9000066AEF /* Supporting Files */,
@@ -693,11 +701,12 @@
 		D401A4221A89DB9000066AEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Danny Perski";
 				TargetAttributes = {
 					D401A4291A89DB9000066AEF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CL35ZTCQNT;
 					};
 					D401A4421A89DB9000066AEF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -782,6 +791,7 @@
 				D483B3961AB4230F009ACC0B /* poison-arrow-tiny.png in Resources */,
 				D4E55C0F1AB6C4C10094A9F8 /* menu-button-pressed@2x.png in Resources */,
 				D483B39F1AB4230F009ACC0B /* scarecrow-tiny@2x.png in Resources */,
+				D4F1EC4D1BA65A8C00F1C056 /* Main_iPad.storyboard in Resources */,
 				D483B34D1AB4230F009ACC0B /* flaming-arrow-small@2x.png in Resources */,
 				D4E55C181AB77C9D0094A9F8 /* shuffle.png in Resources */,
 				D483B3561AB4230F009ACC0B /* katana-small.png in Resources */,
@@ -908,6 +918,7 @@
 				D401A4331A89DB9000066AEF /* AppDelegate.m in Sources */,
 				D432691A1B10663700EECE97 /* About_iPhone.m in Sources */,
 				D401A4301A89DB9000066AEF /* main.m in Sources */,
+				D4F1EC501BA65AC100F1C056 /* ViewController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,6 +957,14 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		D4F1EC4B1BA65A8C00F1C056 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4F1EC4C1BA65A8C00F1C056 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -969,6 +988,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1029,10 +1049,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Rock Paper Missiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mguniverse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1040,10 +1062,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Rock Paper Missiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mguniverse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1061,6 +1085,7 @@
 				);
 				INFOPLIST_FILE = "Rock Paper MissilesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mguniverse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rock Paper Missiles.app/Rock Paper Missiles";
 			};
@@ -1076,6 +1101,7 @@
 				);
 				INFOPLIST_FILE = "Rock Paper MissilesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mguniverse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rock Paper Missiles.app/Rock Paper Missiles";
 			};
