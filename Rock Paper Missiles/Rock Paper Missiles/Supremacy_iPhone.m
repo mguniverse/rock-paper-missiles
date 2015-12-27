@@ -202,6 +202,7 @@
     comboBar.alpha = 0;
     endView.alpha = 0;
     dimView.alpha = 0;
+    alertContainer.alpha = 0;
     
     active1.alpha = 0;
     active1.transform = CGAffineTransformMakeTranslation(-200, 0);
@@ -1326,6 +1327,7 @@
     [UIView setAnimationDelay:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     
+    alertContainer.alpha = 1;
     endView.alpha = 1;
     
     [UIView commitAnimations];
@@ -1414,6 +1416,7 @@
         [UIView setAnimationDuration:animationSpeed];
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         
+        alertContainer.alpha = 0;
         errorView.alpha = 0;
         
         [UIView commitAnimations];
@@ -1439,6 +1442,7 @@
         [UIView setAnimationDuration:animationSpeed];
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         
+        alertContainer.alpha = 0;
         trainingView.alpha = 0;
         
         [UIView commitAnimations];
@@ -1485,6 +1489,7 @@
         [UIView setAnimationDuration:animationSpeed];
         [UIView setAnimationCurve:UIViewAnimationCurveLinear];
         
+        alertContainer.alpha = 0;
         endView.alpha = 0;
         
         [UIView commitAnimations];
@@ -1595,6 +1600,7 @@
     [UIView setAnimationDelay:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     
+    alertContainer.alpha = 1;
     errorView.alpha = 1;
     
     [UIView commitAnimations];
@@ -1616,6 +1622,7 @@
     [UIView setAnimationDelay:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     
+    alertContainer.alpha = 1;
     trainingView.alpha = 1;
     
     [UIView commitAnimations];

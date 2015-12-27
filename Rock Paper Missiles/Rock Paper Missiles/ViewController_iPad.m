@@ -533,7 +533,7 @@
     [UIView setAnimationDuration:animationSpeed];
     [UIView setAnimationDelay:0.5];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    
+
     errorView.alpha = 1;
     
     [UIView commitAnimations];

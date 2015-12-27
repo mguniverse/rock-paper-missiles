@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D401A4291A89DB9000066AEF"
+               BlueprintIdentifier = "D482597B1BD363D400EF9DF5"
                BuildableName = "Rock Paper Missiles.app"
                BlueprintName = "Rock Paper Missiles"
-               ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D401A4421A89DB9000066AEF"
-               BuildableName = "Rock Paper MissilesTests.xctest"
-               BlueprintName = "Rock Paper MissilesTests"
                ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,19 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D401A4421A89DB9000066AEF"
+               BlueprintIdentifier = "D48259941BD363D400EF9DF5"
                BuildableName = "Rock Paper MissilesTests.xctest"
                BlueprintName = "Rock Paper MissilesTests"
+               ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D482599F1BD363D400EF9DF5"
+               BuildableName = "Rock Paper MissilesUITests.xctest"
+               BlueprintName = "Rock Paper MissilesUITests"
                ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D401A4291A89DB9000066AEF"
+            BlueprintIdentifier = "D482597B1BD363D400EF9DF5"
             BuildableName = "Rock Paper Missiles.app"
             BlueprintName = "Rock Paper Missiles"
             ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
@@ -79,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D401A4291A89DB9000066AEF"
+            BlueprintIdentifier = "D482597B1BD363D400EF9DF5"
             BuildableName = "Rock Paper Missiles.app"
             BlueprintName = "Rock Paper Missiles"
             ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">
@@ -98,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D401A4291A89DB9000066AEF"
+            BlueprintIdentifier = "D482597B1BD363D400EF9DF5"
             BuildableName = "Rock Paper Missiles.app"
             BlueprintName = "Rock Paper Missiles"
             ReferencedContainer = "container:Rock Paper Missiles.xcodeproj">

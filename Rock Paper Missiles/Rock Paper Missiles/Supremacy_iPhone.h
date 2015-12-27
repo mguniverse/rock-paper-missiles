@@ -91,6 +91,8 @@
     IBOutlet UIButton *menuButton;
     IBOutlet UIButton *shuffleButton;
     
+    IBOutlet UIView *alertContainer;
+    
     IBOutlet UIView *trainingView;
     
     IBOutlet UIView *retryView;
