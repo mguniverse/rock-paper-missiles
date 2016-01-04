@@ -205,22 +205,22 @@
     alertContainer.alpha = 0;
     
     active1.alpha = 0;
-    active1.transform = CGAffineTransformMakeTranslation(-200, 0);
+    active1.transform = CGAffineTransformMakeTranslation(200, 0);
     active2.alpha = 0;
-    active2.transform = CGAffineTransformMakeTranslation(-200, 0);
+    active2.transform = CGAffineTransformMakeTranslation(200, 0);
     active3.alpha = 0;
-    active3.transform = CGAffineTransformMakeTranslation(-200, 0);
+    active3.transform = CGAffineTransformMakeTranslation(200, 0);
     opponent1.alpha = 0;
-    opponent1.transform = CGAffineTransformMakeTranslation(-200, 0);
+    opponent1.transform = CGAffineTransformMakeTranslation(200, 0);
     
     empty1.alpha = 0;
-    empty1.transform = CGAffineTransformMakeTranslation(-200, 0);
+    empty1.transform = CGAffineTransformMakeTranslation(200, 0);
     empty2.alpha = 0;
-    empty2.transform = CGAffineTransformMakeTranslation(-200, 0);
+    empty2.transform = CGAffineTransformMakeTranslation(200, 0);
     empty3.alpha = 0;
-    empty3.transform = CGAffineTransformMakeTranslation(-200, 0);
+    empty3.transform = CGAffineTransformMakeTranslation(200, 0);
     empty4.alpha = 0;
-    empty4.transform = CGAffineTransformMakeTranslation(-200, 0);
+    empty4.transform = CGAffineTransformMakeTranslation(200, 0);
     
     menuButton.alpha = 0;
     menuButton.transform = CGAffineTransformMakeTranslation(0, 60);

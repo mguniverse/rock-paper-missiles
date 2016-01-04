@@ -172,6 +172,26 @@
 }
 
 -(IBAction)about {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:animationSpeed];
+    [UIView setAnimationCurve:UIViewAnimationCurveLinear];
+    
+    supremacyView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    rushView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    aboutView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    supremacyView.alpha = 0;
+    rushView.alpha = 0;
+    aboutView.alpha = 0;
+    
+    bannerLabel.transform = CGAffineTransformMakeTranslation(0, 60);
+    bannerLabel.alpha = 0;
+    
+    [UIView commitAnimations];
+    
+    [self performSelector:@selector(initiateAboutSegue) withObject:self afterDelay:animationSpeed                                                                                                                                                                                                              ];
+}
+
+-(IBAction)error {
     [self buttonSound];
     [self showError];
 }
@@ -207,6 +227,10 @@
 
 -(void)initiateSupremacySegue {
     [self performSegueWithIdentifier: @"Supremacy" sender: self];
+}
+
+-(void)initiateAboutSegue {
+    [self performSegueWithIdentifier: @"About" sender: self];
 }
 
 /*
@@ -582,11 +606,11 @@
     bannerLabel.alpha = 0;
     bannerLabel.transform = CGAffineTransformMakeTranslation(0, -60);
     
-    supremacyView.transform = CGAffineTransformMakeTranslation(200, 0);
-    rushView.transform = CGAffineTransformMakeTranslation(200, 0);
-    aboutView.transform = CGAffineTransformMakeTranslation(200, 0);
-    backView.transform = CGAffineTransformMakeTranslation(200, 0);
-    beginView.transform = CGAffineTransformMakeTranslation(200, 0);
+    supremacyView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    rushView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    aboutView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    backView.transform = CGAffineTransformMakeTranslation(-200, 0);
+    beginView.transform = CGAffineTransformMakeTranslation(-200, 0);
     supremacyView.alpha = 0;
     rushView.alpha = 0;
     aboutView.alpha = 0;

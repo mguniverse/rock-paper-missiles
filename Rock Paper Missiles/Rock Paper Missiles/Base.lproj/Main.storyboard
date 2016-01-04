@@ -74,7 +74,7 @@
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="about" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2m-LN-GJe"/>
+                                                    <action selector="error" destination="BYZ-38-t0r" eventType="touchUpInside" id="UGj-w4-tQI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -675,7 +675,7 @@
                                                 <state key="selected" image="menu-button-pressed.png"/>
                                                 <state key="highlighted" image="menu-button-pressed.png"/>
                                                 <connections>
-                                                    <action selector="mainMenu" destination="udw-XY-4IG" eventType="touchUpInside" id="ZVm-Ys-k9O"/>
+                                                    <action selector="mainMenu" destination="JOK-k5-Ubx" eventType="touchUpInside" id="7oR-Vs-Mk6"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ceh-UI-uLU">
@@ -691,29 +691,42 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="0.0" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="bll-bD-lzf">
-                                <rect key="frame" x="20" y="144" width="280" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" id="GvT-Bf-n4d">
+                                <rect key="frame" x="0.0" y="88" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This game was designed by Danny Perski, with graphics from Ahram Lee and Leyla Mamedova. Music was written by Andrew Matecha. " textAlignment="center" id="Mpd-Lc-DET">
-                                        <rect key="frame" x="20" y="186" width="240" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missiles-small.png" id="wdn-xe-yBn">
-                                        <rect key="frame" x="76" y="34" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" id="bll-bD-lzf">
+                                        <rect key="frame" x="20" y="70" width="280" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="missiles-small.png" id="wdn-xe-yBn">
+                                                <rect key="frame" x="76" y="31" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This game was designed by Danny Perski, with graphics from Ahram Lee and Leyla Mamedova. Music was written by Andrew Matecha. " textAlignment="center" id="Mpd-Lc-DET">
+                                                <rect key="frame" x="20" y="183" width="240" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.64196841930000004" green="0.01293563445" blue="0.019128013669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="aboutView" destination="bll-bD-lzf" id="J28-QJ-Lvd"/>
+                        <outlet property="backButton" destination="vRW-TF-1Al" id="vwW-hn-ib1"/>
+                        <outlet property="bannerLabel" destination="Ceh-UI-uLU" id="4QE-dT-M4X"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="Menu" animates="NO" id="Qag-WU-NOF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4au-3J-PUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -731,4 +744,7 @@
         <image name="shuffle-pressed.png" width="44" height="44"/>
         <image name="shuffle.png" width="44" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Qag-WU-NOF"/>
+    </inferredMetricsTieBreakers>
 </document>

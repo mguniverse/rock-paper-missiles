@@ -27,8 +27,7 @@
     
     IBOutlet UIButton *backButton;
     
-    IBOutlet UIView *moreGamesView;
-    IBOutlet UIView *tutorialView;
+    IBOutlet UIView *aboutView;
 }
 
 @end
